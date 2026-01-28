@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard - BROKEN VERSION</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Chart.js loaded but never used properly -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div style="background: #ff6b6b; color: white; padding: 15px; margin-bottom: 20px; text-align: center; font-weight: bold;">
+            ⚠️ BEFORE: Abandoned Dashboard - Multiple Bugs
+        </div>
+
+        <h1>Coffee Shop Sales Dashboard</h1>
+        <p>Analytics for January 2024</p>
+
+        <!-- Broken filters section -->
+        <div class="filters">
+            <h3>Filters (BROKEN)</h3>
+            
+            <label>Start Date:</label>
+            <input type="date" id="startDate" value="2024-01-15">
+            
+            <label>End Date:</label>
+            <input type="date" id="endDate" value="2024-01-24">
+            
+            <label>Location:</label>
+            <select id="locationFilter">
+                <option value="all">All Locations</option>
+                <option value="Downtown">Downtown</option>
+                <option value="Uptown">Uptown</option>
+            </select>
+            
+            <!-- Button that crashes the page -->
+            <button onclick="filterData()">Apply Filters</button>
+            
+            <!-- Button that downloads corrupted CSV -->
+            <button onclick="exportToCSV()">Export CSV</button>
+        </div>
+
+        <!-- Chart 1: Revenue Over Time - EMPTY BOX -->
+        <div class="chart-container">
+            <h2>Revenue Over Time</h2>
+            <p style="color: #999; font-style: italic;">Chart should display here but doesn't render...</p>
+            <!-- Canvas exists but chart never initializes -->
+            <canvas id="revenueChart"></canvas>
+        </div>
+
+        <!-- Chart 2: Sales by Category - EMPTY BOX -->
+        <div class="chart-container">
+            <h2>Sales by Category</h2>
+            <p style="color: #999; font-style: italic;">Chart should display here but doesn't render...</p>
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+        <!-- Chart 3: Customer Traffic - EMPTY BOX -->
+        <div class="chart-container">
+            <h2>Customer Traffic by Location</h2>
+            <p style="color: #999; font-style: italic;">Chart should display here but doesn't render...</p>
+            <canvas id="customerChart"></canvas>
+        </div>
+
+        <!-- Error message area (but no errors are shown to user) -->
+        <div id="errorMessage"></div>
+    </div>
+
+    <script src="broken-dashboard.js"></script>
+</body>
+</html>
