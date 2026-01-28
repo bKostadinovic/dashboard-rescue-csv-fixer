@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard - FIXED VERSION</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- PapaParse for CSV handling -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="success-banner">
+            ✅ AFTER: Production-Ready Dashboard with Working Charts & Filters
+        </div>
+
+        <h1>Coffee Shop Sales Dashboard</h1>
+        <p class="subtitle">Analytics for January 2024</p>
+
+        <!-- Summary Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Revenue</div>
+                <div class="stat-value" id="totalRevenue">$0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Customers</div>
+                <div class="stat-value" id="totalCustomers">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg. Transaction</div>
+                <div class="stat-value" id="avgTransaction">$0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Transactions</div>
+                <div class="stat-value" id="totalTransactions">0</div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <div class="filter-item">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate" value="2024-01-15">
+                </div>
+                
+                <div class="filter-item">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate" value="2024-01-24">
+                </div>
+                
+                <div class="filter-item">
+                    <label for="locationFilter">Location</label>
+                    <select id="locationFilter">
+                        <option value="all">All Locations</option>
+                        <option value="Downtown">Downtown</option>
+                        <option value="Uptown">Uptown</option>
+                    </select>
+                </div>
+                
+                <div class="filter-item">
+                    <label>&nbsp;</label>
+                    <button class="btn-primary" id="applyFilters">Apply Filters</button>
+                </div>
+                
+                <div class="filter-item">
+                    <label>&nbsp;</label>
+                    <button class="btn-secondary" id="exportCSV">Export CSV</button>
+                </div>
+
+                <div class="filter-item">
+                    <label>&nbsp;</label>
+                    <button class="btn-secondary" id="resetFilters">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingIndicator" class="loading" style="display: none;">
+            Loading dashboard data...
+        </div>
+
+        <!-- Error Message Area -->
+        <div id="errorContainer"></div>
+
+        <!-- Charts Grid -->
+        <div class="charts-grid">
+            <!-- Chart 1: Revenue Over Time -->
+            <div class="chart-container">
+                <h2>Revenue Over Time</h2>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <!-- Chart 2: Sales by Category -->
+            <div class="chart-container">
+                <h2>Sales by Category</h2>
+                <canvas id="categoryChart"></canvas>
+            </div>
+
+            <!-- Chart 3: Customer Traffic -->
+            <div class="chart-container">
+                <h2>Customer Traffic by Location</h2>
+                <canvas id="customerChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript modules in correct order -->
+    <script src="js/data-loader.js"></script>
+    <script src="js/chart-manager.js"></script>
+    <script src="js/filter-handler.js"></script>
+    <script src="js/csv-exporter.js"></script>
+</body>
+</html>
