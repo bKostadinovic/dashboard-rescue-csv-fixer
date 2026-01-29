@@ -3,6 +3,10 @@
 > **Portfolio Project by Borivoje Kostadinovic**  
 > Completing an abandoned analytics dashboard with working charts, filters, and clean CSV exports
 
+## 🚀 Live Demo
+
+**Try it now:** https://dashboard-rescue-bora.netlify.app/
+
 ---
 
 ## 🚨 The Problem
@@ -451,10 +455,9 @@ Need help completing your abandoned dashboard or fixing broken charts?
 ## 🔗 Related Projects
 
 **Also in my portfolio:**
-- [Contact Form Rescue Kit](https://github.com/bKostadinovic/contact-form-rescue-kit) - Fix broken contact forms with spam protection
+- [Contact Form Rescue Kit](https://github.com/bKostadinovic/contact-form-rescue-kit) - Fix broken contact forms with spam protection → [Live Demo](https://contact-form-rescue-bora.netlify.app/)
 
-**Coming soon:**
-- AI Prompt Library Tool - Organize and search prompts without SaaS fees
+- [Prompt Library Organizer](https://github.com/bKostadinovic/prompt-library-organizer) - Organize AI prompts without SaaS subscriptions → [Live Demo](https://prompt-library-bora.netlify.app/)
 
 ---
 
