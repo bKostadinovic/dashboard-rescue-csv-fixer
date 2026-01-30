@@ -1,5 +1,7 @@
 # Dashboard Rescue & CSV Export Fixer
 
+🌐 Portfolio: [bora-portfolio.netlify.app](https://bora-portfolio.netlify.app)
+
 > **Portfolio Project by Borivoje Kostadinovic**  
 > Completing an abandoned analytics dashboard with working charts, filters, and clean CSV exports
 
